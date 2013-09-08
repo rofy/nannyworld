@@ -1,0 +1,38 @@
+<div>
+	<%= form_tag centers_path, :method => :get do %>
+	<label style="margin-left: 60px;">Enter your zip code: </label>
+	<%= text_field_tag :search, params[:search], :class => 'search-text' %>
+
+	<label>Within: </label>
+	<%=select_tag "within", "<option> 5 </option><option> 10 </option><option> 15 </option><option> 20 </option><option> 25 </option><option> 50 </option> ".html_safe%>
+	miles
+	
+
+    <%= submit_tag "Find day care centers", :name => nil, :class => 'search-button' %>
+	
+	<% end %>
+</div>
+<br/><br/>
+<div>
+	
+<% @centers.each do |center| %>
+		<div style="border:  solid #000000; padding: 10px; margin-left: 60px; margin-right:60px; margin-bottom: 10px;">
+		<h3> <%= center.name %></h3>
+		<p>  <%= center.address %></p>
+		<p>  <%= center.contact %></p>
+		<div style="overflow: hidden ">
+			<%=button_to 'Follow', follow_button_path(:id => center.id), :class=>"follow-button"%>
+	    </div>
+	</div>
+		
+	<%end%>
+</div>
+
+
+
+
+
+
+
+
+

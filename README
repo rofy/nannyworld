@@ -1,0 +1,12 @@
+Implemented stories so far are:
+=================================
+- User can sign up using his email 
+- User can search for day care centers using his zip code
+- User can follow the updates of a certain daycare center.
+
+Gems used:
+=============
+- pg (postgresql)
+- area, geocoded (zip code search) 
+- devise (users sign up. sign in..etc)
+
