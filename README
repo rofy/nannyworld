@@ -7,6 +7,7 @@ Implemented stories so far are:
 - User can confirm enrollment to a certain day care center by uploading an evidence of enrollment. 
 
 - User can request to talk to an ambassador of a certain day care center
+- API is implemented for centers #show 
 
 Remarks:
 ==========
@@ -18,6 +19,8 @@ Remarks:
 - Notice that this is not the best database design, and not the best implementation, It is just a quick demo to illustrate everything. Since we are agile, this will be refactored accordingly once we know our customer's feedback. 
 
 - I was really very optimistic when I first created my user mockups, but I wish I have covered and illustrated most of the system's parts.
+
+
 
 Gems used:
 =============
