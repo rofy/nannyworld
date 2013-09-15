@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130907090231) do
+ActiveRecord::Schema.define(:version => 20130915062840) do
 
   create_table "centers", :force => true do |t|
     t.string   "address"
@@ -29,6 +29,16 @@ ActiveRecord::Schema.define(:version => 20130907090231) do
   end
 
   add_index "centers_users", ["center_id", "user_id"], :name => "index_centers_users_on_center_id_and_user_id"
+
+  create_table "evidences", :force => true do |t|
+    t.integer  "wrapper_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.string   "media_file_name"
+    t.string   "media_content_type"
+    t.integer  "media_file_size"
+    t.datetime "media_updated_at"
+  end
 
   create_table "users", :force => true do |t|
     t.string   "email",                               :default => "", :null => false
@@ -48,5 +58,16 @@ ActiveRecord::Schema.define(:version => 20130907090231) do
 
   add_index "users", ["email"], :name => "index_users_on_email", :unique => true
   add_index "users", ["reset_password_token"], :name => "index_users_on_reset_password_token", :unique => true
+
+  create_table "wrappers", :force => true do |t|
+    t.integer  "center_id",  :null => false
+    t.integer  "user_id",    :null => false
+    t.boolean  "following"
+    t.boolean  "enrolled"
+    t.boolean  "ambassador"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.boolean  "requested"
+  end
 
 end

@@ -1,7 +1,6 @@
 class AddUserIdToCenters < ActiveRecord::Migration
   def self.up
-     add_column :centers, :user_id, :integer
-    
+     add_column :centers, :user_id, :integer    
   end
 
   def self.down

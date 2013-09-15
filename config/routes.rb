@@ -3,6 +3,10 @@ Nannyworld::Application.routes.draw do
 
   devise_for :users
   match '/centers/follow' => 'centers#follow', :as => 'follow_button'
+  match '/centers/find_ambassador' => 'centers#find_ambassador', :as => 'find_ambassador_button'
+  match '/centers/confirm_enrollment_1' => 'centers#confirm_enrollment_1', :as => 'confirm_enrollment_1'
+  match '/centers/confirm_enrollment_2' => 'centers#confirm_enrollment_2', :as => 'confirm_enrollment_2'
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

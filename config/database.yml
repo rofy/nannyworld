@@ -4,7 +4,16 @@ development:
     adapter: postgresql
     encoding: utf8
     database: nannyworld_development
-    username: rofy
+    username: postgres
+    password: 
+    host: localhost
+    
+    
+test:
+    adapter: postgresql
+    encoding: utf8
+    database: nannyworld_test
+    username: postgres
     password: 
     host: localhost
 

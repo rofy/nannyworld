@@ -1,18 +1,42 @@
 Implemented stories so far are:
 =================================
 - User can sign up using his email 
-- User can search for day care centers using his zip code
+- User can search for day care centers using his zip code (This is completely Ajax now, where the URL doesn't change when searching)
+
 - User can follow the updates of a certain daycare center.
+- User can confirm enrollment to a certain day care center by uploading an evidence of enrollment. 
+
+- User can request to talk to an ambassador of a certain day care center
+
+Remarks:
+==========
+
+- Added some unit, functional and integration tests. (Notice that the code in not fully covered with tests) 
+
+- refactored the database design, currently using has_many :through , ins teach of has_and_belongs_to_many relation
+
+- Notice that this is not the best database design, and not the best implementation, It is just a quick demo to illustrate everything. Since we are agile, this will be refactored accordingly once we know our customer's feedback. 
+
+- I was really very optimistic when I first created my user mockups, but I wish I have covered and illustrated most of the system's parts.
 
 Gems used:
 =============
 - pg (postgresql)
 - area, geocoded (zip code search) 
 - devise (users sign up. sign in..etc)
+- paperclip for the file attachments
+- capybara, spec, factory girl for testing
+- jquery_rails for adding Ajax
+
+====================================
 
 Pushed on Github (public) 
 https://github.com/rofy/nannyworld
 
 References:
 =============
-stackoverflow.com 
+- stackoverflow.com (solving bugs)
+- http://www.10hacks.com/rspec-capybara-devise-login-tests/ (following step by step tutorials)
+- http://everydayrails.com/2012/04/24/testing-series-rspec-requests.html (tutorials)
+- http://railscasts.com/episodes/275-how-i-test (step by step tutorials)
+- Googling and Googling and Googling!! 

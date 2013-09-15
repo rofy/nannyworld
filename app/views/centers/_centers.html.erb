@@ -1,0 +1,15 @@
+<% @centers.each do |center| %>
+		<div style="border:  solid #000000; padding: 10px; margin-left: 60px; margin-right:60px; margin-bottom: 10px;">
+		<h3> <%= center.name %></h3>
+		<p>  <%= center.address %></p>
+		<p>  <%= center.contact %></p>
+		<div style="overflow: hidden ">
+			<%=button_to 'Follow', follow_button_path(:id => center.id), :class=>"follow-button"%>
+			<%=button_to 'Find an ambassador', find_ambassador_button_path(:id => center.id), :class=>"follow-button"%>
+			<%=button_to 'Confirm Enrollment', confirm_enrollment_1_path(:id => center.id), :class=>"follow-button"%>
+	    </div>
+	</div>
+		
+	<%end%>
+
+<%= will_paginate(@centers) %>

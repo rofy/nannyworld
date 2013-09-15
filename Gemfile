@@ -9,6 +9,9 @@ gem 'pg'
 gem 'devise', '1.1.rc0'
 gem 'area'
 gem 'geocoder'
+gem 'will_paginate', '3.0.pre2'
+gem 'jquery-rails'
+gem 'paperclip'
 
 # Use unicorn as the web server
 # gem 'unicorn'
@@ -32,3 +35,13 @@ gem 'geocoder'
 # group :development, :test do
 #   gem 'webrat'
 # end
+
+group :development, :test do
+  gem 'rspec-rails', '~> 2.0'
+  gem 'factory_girl_rails'
+end
+group :test do 
+  gem 'faker' 
+  gem 'capybara' 
+  gem 'launchy' 
+ end
